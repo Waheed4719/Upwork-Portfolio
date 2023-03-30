@@ -7,7 +7,11 @@ const VerticalTimeline = React.forwardRef(({ entered = false }, ref) => {
       ref={ref}
       className="fixed top-0 w-[2px] h-screen left-[20px] md:left-[100px] z-[100]"
     >
-      <div className="h-screen bg-white top-0 opacity-[0.5]"></div>
+      <div
+        className={`transition-colors duration-200 h-screen bg-white top-0 opacity-[0.5] ${
+          entered ? "bg-white" : "bg-[#217017]"
+        }`}
+      ></div>
       <motion.div
         initial={{
           y: "70%",
@@ -22,9 +26,13 @@ const VerticalTimeline = React.forwardRef(({ entered = false }, ref) => {
           restDelta: 0.001,
           type: "spring",
         }}
-        className={`absolute top-0 left-0 w-[2px] min-h-screen  bg-white`}
+        className={`absolute top-0 left-0 w-[2px] min-h-screen  `}
       >
-        <div className="bg-white w-3 h-3 rounded-full left-[50%] translate-x-[-5px]"></div>
+        <div
+          className={`transition-colors duration-200  bg-white w-3 h-3 rounded-full left-[50%] translate-x-[-5px] ${
+            entered ? "bg-white" : "bg-[#217017]"
+          } `}
+        ></div>
       </motion.div>
     </motion.div>
   );

@@ -1,9 +1,80 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Granim from "granim";
 import { motion } from "framer-motion";
 
-function BackgroundWrapper() {
+const BackgroundWrapper = ({ isInView }) => {
+  const [currentState, setCurrentState] = useState("default-state");
+
+  useEffect(() => {
+    if (isInView) {
+      setCurrentState("second-state");
+    } else {
+      setCurrentState("default-state");
+    }
+  }, [isInView]);
+
+  useEffect(() => {
+    const granimInstance = new Granim({
+      element: "#granim-canvas",
+      direction: "diagonal",
+      isPausedWhenNotInView: true,
+      states: {
+        "default-state": {
+          gradients: [
+            ["#000", "#000"],
+            // ["#000", "#000", "#000"],
+            // [
+            //   // { color: "rgba(0, 0, 0, 0)", pos: 0 },
+            //   { color: "#000", pos: 0 },
+            //   { color: "#000", pos: 0.2 },
+            //   { color: "#000", pos: 0.75 },
+            //   // { color: "#833ab4", pos: 0.2 },
+            //   // { color: "#fd1d1d", pos: 0.8 },
+            //   // { color: "#38ef7d", pos: 1 },
+            // ],
+            // ["#834D9B", "#D04ED6"],
+            // ["#1A2980", "#26D0CE"],
+            // ["#4568DC", "#B06AB3"],
+          ],
+        },
+        "second-state": {
+          gradients: [
+            // [
+            //   { color: "#9d9d9d", pos: 0 },
+            //   { color: "#10246b", pos: 0.24 },
+            //   { color: "#a50624", pos: 0.69 },
+            //   // { color: "#40e0d0", pos: 0 },
+            //   // { color: "#ff8c00", pos: 0.2 },
+            //   // { color: "#ff0080", pos: 0.75 },
+            // ],
+            // ["#e6e6e6", "#6eda44", "#1d4354"],
+            ["#000", "#000"],
+            ["#D31027", "#EA384D"],
+            ["#4B1248", "#F72585"],
+            ["#2C5364", "#0F2027"],
+          ],
+          transitionSpeed: 3000,
+        },
+      },
+    });
+
+    granimInstance.changeState(currentState);
+
+    return () => granimInstance.destroy();
+  }, [currentState]);
+
   return (
     <div className="fixed bg-transparent flex h-screen w-screen z-[10]">
+      <canvas
+        id="granim-canvas"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      ></canvas>
       {Array(14)
         .fill(0)
         .map((item, index) => (
@@ -69,6 +140,6 @@ function BackgroundWrapper() {
         ))}
     </div>
   );
-}
+};
 
 export default BackgroundWrapper;

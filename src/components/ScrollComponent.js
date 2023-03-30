@@ -1,35 +1,55 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useRef, useEffect } from "react";
+import { gsap, ScrollTrigger } from "gsap/all";
 
-const ScrollComponent = () => {
-  const containerRef = useRef(null);
+gsap.registerPlugin(ScrollTrigger);
+
+export const ScrollComponent = () => {
+  const refSlide1 = useRef(null);
+  const refSlide2 = useRef(null);
+  const refSlide3 = useRef(null);
+  const refSlide4 = useRef(null);
+  const refSlide5 = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    let sections = gsap.utils.toArray(".panel");
-
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        // base vertical scrolling on how wide the container is so it feels more natural.
-        end: "+=3500",
-      },
+    const sections = [
+      refSlide1,
+      refSlide2,
+      refSlide3,
+      refSlide4,
+      refSlide5,
+    ].map((ref) => ref.current);
+    sections.forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        pin: false,
+        pinSpacing: false,
+      });
     });
-  }, []);
+
+    ScrollTrigger.create({
+      snap: 1 / (sections.length - 1),
+    });
+  }, [refSlide1, refSlide2, refSlide3, refSlide4, refSlide5]);
 
   return (
-    <div className="container" ref={containerRef}>
-      <div className="panel">Panel 1</div>
-      <div className="panel">Panel 2</div>
-      <div className="panel">Panel 3</div>
+    <div>
+      <section className="h-screen bg-red-200" ref={refSlide1}>
+        <h1>Section 1</h1>
+      </section>
+      <section className="h-screen" ref={refSlide2}>
+        <h1>Section 2</h1>
+      </section>
+      <section className="h-screen" ref={refSlide3}>
+        <h1>Section 3</h1>
+      </section>
+      <section className="h-screen" ref={refSlide4}>
+        <h1>Section 4</h1>
+      </section>
+      <section className="h-screen" ref={refSlide5}>
+        <h1>Section 5</h1>
+      </section>
     </div>
   );
 };
-
 export default ScrollComponent;
