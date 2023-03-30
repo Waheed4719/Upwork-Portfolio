@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.timeline {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  border-left: 2px solid #fff;
+  padding-left: 2px;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timeline-item {
+  position: relative;
+  margin-bottom: 10vh;
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timeline-content {
+  position: relative;
+  top: -1vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #cfd8dc;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -5px;
+  width: 2px;
+  height: 100%;
+  background-color: #cfd8dc;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:last-child::before {
+  height: 6px;
 }

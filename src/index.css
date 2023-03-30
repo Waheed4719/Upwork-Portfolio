@@ -1,13 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 14px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nova Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  font-family: "Nova Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p {
+  font-family: "Nova Round", sans-serif;
+}
+h1 {
+  font-size: 28px;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.section1 {
+  background: linear-gradient(
+    220.54deg,
+    rgba(157, 157, 157, 0.682) 0%,
+    rgba(16, 36, 107, 0.682) 23.8975%,
+    rgba(165, 6, 36, 0.682) 68.2785%
+  );
+}
+
+.section2 {
+  background: linear-gradient(
+    288deg,
+    rgba(230, 230, 230, 0.33) 0%,
+    rgb(110, 218, 68) 35%,
+    rgb(29, 67, 84) 100%
+  );
+}
+
+.section3 {
+  background: linear-gradient(
+    299deg,
+    rgb(146, 146, 146) 0%,
+    rgb(200, 28, 67) 25%,
+    rgb(32, 32, 32) 100%
+  );
+}
+
+.section4 {
+  background: linear-gradient(
+    192deg,
+    rgb(201, 49, 127) 0%,
+    rgb(174, 130, 53) 100%
+  );
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+svg path {
+  transition: 0.3s all ease-in-out;
+}
+
+svg:hover path {
+  fill-opacity: 50% !important;
+  stroke: #000 !important;
+}
+.dev-icon svg:hover path {
+  stroke: #fff !important;
+}
+.dev-icon:not(.email) path {
+  fill: #fff;
 }
