@@ -9,7 +9,7 @@ const MyProjects = () => {
   const controls = useAnimation();
 
   return (
-    <div className="w-full h-full px-[20px]" ref={ref}>
+    <div className="w-full h-full px-[20px]" ref={ref} id="projects">
       <div className={`sticky top-0 mb-[4rem]`}>
         <h1 className="text-white text-5xl leading-[4rem]">
           Some of my <br /> <span className="text-[#217017]">Projects</span>

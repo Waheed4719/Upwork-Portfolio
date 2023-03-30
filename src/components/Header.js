@@ -46,8 +46,8 @@ const Header = () => {
               <a href={item.href}>
                 {item.icon ? (
                   <ReactSVG
-                    className={`h-8 w-8 dev-icon text-[1.2rem] text-white ${
-                      item.icon === "email" && "email"
+                    className={`h-8 w-8 dev-icon text-[1.2rem] text-white items-center flex ${
+                      item.icon === "email" && "email h-[2.5rem]"
                     }`}
                     src={getIcons(item.icon)}
                   />
