@@ -5,8 +5,11 @@
 :root {
   font-size: 14px;
 }
-
+/* html {
+  scroll-snap-type: y mandatory;
+} */
 body {
+  scroll-behavior: smooth;
   margin: 0;
   font-family: "Nova Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -93,4 +96,39 @@ svg:hover path {
 }
 .dev-icon:not(.email) path {
   fill: #fff;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+.element-container {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-element {
+  display: inline-flex;
+  width: 200px;
+  height: 150px;
+  margin: 5px;
+}
+
+.orange {
+  background-color: #f38630;
+}
+.green {
+  background-color: #6fb936;
+}
+.purple {
+  background-color: #7d4696;
 }
