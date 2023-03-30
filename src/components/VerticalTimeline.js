@@ -31,10 +31,16 @@ const VerticalTimeline = React.forwardRef(({ entered = false }, ref) => {
         }`}
       >
         <div
-          className={`transition-colors duration-200  w-3 h-3 rounded-full left-[50%] translate-x-[-5px] ${
+          className={`transition-colors duration-200  w-3 h-3 rounded-full left-[50%] translate-x-[-5px] flex items-center justify-center relative ${
             entered ? "bg-white" : "bg-[#217017]"
           } `}
-        ></div>
+        >
+          <div
+            className={`transition-colors duration-200  w-3 h-3 rounded-full  flex items-center justify-center dot absolute ${
+              entered ? "bg-white" : "bg-[#217017]"
+            } `}
+          ></div>
+        </div>
       </motion.div>
     </motion.div>
   );

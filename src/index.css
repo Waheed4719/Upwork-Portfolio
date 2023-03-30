@@ -5,9 +5,11 @@
 :root {
   font-size: 14px;
 }
-
-body {
+html {
+  color-scheme: dark;
   scroll-behavior: smooth;
+}
+body {
   margin: 0;
   font-family: "Nova Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -88,11 +90,11 @@ svg {
   width: 100%;
 }
 
-svg path {
+svg:not(.customSvg) path {
   transition: 0.3s all ease-in-out;
 }
 
-svg:hover path {
+svg:not(.customSvg):hover path {
   fill-opacity: 50% !important;
   stroke: #000 !important;
 }
@@ -111,29 +113,52 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.element-container {
-  width: 80%;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.dot {
+  animation: pulse 2s infinite;
 }
 
-.filter-element {
-  display: inline-flex;
-  width: 200px;
-  height: 150px;
-  margin: 5px;
+.project-card {
+}
+.project-card:hover {
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+  opacity: 0;
+  animation: scaleAndFade 0.3s ease-in-out;
 }
 
-.orange {
-  background-color: #f38630;
+@keyframes pulse {
+  0% {
+    transform: scale(3);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0.6;
+  }
 }
-.green {
-  background-color: #6fb936;
-}
-.purple {
-  background-color: #7d4696;
+
+@keyframes scaleAndFade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

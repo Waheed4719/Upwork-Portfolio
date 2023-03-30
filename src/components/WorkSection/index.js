@@ -24,7 +24,7 @@ const WorkSection = ({
   }, []);
 
   return (
-    <Section>
+    <Section id="work">
       <div ref={ref} className="w-full h-full px-[20px]">
         <div className="relative w-fit">
           <h1 className="mb-[10px] mt-0 text-left text-2xl text-white">

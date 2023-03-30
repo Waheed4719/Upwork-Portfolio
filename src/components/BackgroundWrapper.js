@@ -49,7 +49,7 @@ const BackgroundWrapper = ({ isInView }) => {
   }, [currentState]);
 
   return (
-    <div className="fixed bg-transparent flex h-screen w-screen z-[10]">
+    <div className="fixed bg-transparent flex h-screen w-screen z-[10] pointer-events-auto">
       <canvas
         id="granim-canvas"
         style={{
