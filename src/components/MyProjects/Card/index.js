@@ -42,12 +42,12 @@ const Card = ({
     </div>
     <img src={image} alt={`${title}`} />
     <div className="p-4 flex-1 flex flex-col">
-      <h4 className="mb-4 text-white font-semibold">{title}</h4>
-      <p className="mb-4 text-white text-sm flex-1">{description}</p>
+      <h4 className="mb-4 text-white text-[1.2rem] font-semibold">{title}</h4>
+      <p className="mb-4 text-white text-[1.1rem] flex-1">{description}</p>
       <div className="flex gap-2 mt-auto align-bottom">
         {technologies?.map((tech) => (
           <span
-            className="text-xs text-gray-300 group-hover:text-gray-100"
+            className="text-[1.1rem] text-gray-300 group-hover:text-gray-100"
             key={tech}
           >
             #{tech}
