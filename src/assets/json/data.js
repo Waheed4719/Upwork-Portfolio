@@ -144,30 +144,35 @@ export const works = [
     ],
   },
 ];
-
 export const headerItems = [
   {
-    id: 1,
-    title: "How It Works",
-    href: "#howitworks",
+    name: "Work",
+    href: "#work",
   },
   {
-    id: 2,
-    title: "Benefits",
-    href: "#benefits",
+    name: "Projects",
+    href: "#projects",
   },
   {
-    id: 3,
-    title: "Features",
-    href: "#features",
+    name: "Contact",
+    href: "#contact",
   },
   {
-    id: 4,
-    title: "Reviews",
-    href: "#reviews",
+    name: "LinkedIn",
+    href: "#",
+    icon: "linkedin",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/melanietr98",
+    icon: "github2",
+  },
+  {
+    name: "Email",
+    href: "#",
+    icon: "email",
   },
 ];
-
 export const myProjects = [
   {
     id: 1,
@@ -206,12 +211,12 @@ export const myProjects = [
     liveSite: "https://melanietr98.github.io/",
     technologies: ["vanilljs", "css3"],
   },
-  // {
-  //   id: 5,
-  //   title: "Tip Calculator",
-  //   description: "",
-  //   image: TipCalculatorImage,
-  //   liveSite: "https://github.com/melanietr98/tip-calculator",
-  //   technologies: ["nodejs", "expressjs"],
-  // },
+  {
+    id: 5,
+    title: "Tip Calculator",
+    description: "",
+    image: TipCalculatorImage,
+    liveSite: "https://github.com/melanietr98/tip-calculator",
+    technologies: ["nodejs", "expressjs"],
+  },
 ];

@@ -1,36 +1,7 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
 import { getIcons } from "../utils/getIcons";
-
-const headerItems = [
-  {
-    name: "Work",
-    href: "#work",
-  },
-  {
-    name: "Projects",
-    href: "#projects",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
-  {
-    name: "LinkedIn",
-    href: "#",
-    icon: "linkedin",
-  },
-  {
-    name: "GitHub",
-    href: "#",
-    icon: "github2",
-  },
-  {
-    name: "Email",
-    href: "#",
-    icon: "email",
-  },
-];
+import { headerItems } from "../assets/json/data";
 
 const Header = () => {
   return (
