@@ -1,20 +1,14 @@
-import { useRef, useState, useEffect } from "react";
-import {
-  useScroll,
-  useSpring,
-  useInView,
-  motion,
-  useTransform,
-} from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import VerticalTimeline from "./components/VerticalTimeline";
 import BackgroundWrapper from "./components/BackgroundWrapper";
 import { works } from "./assets/json/data";
 import Header from "./components/Header";
 import WorkSection from "./components/WorkSection";
 import Drawer from "./components/Drawer";
-import FlipComponent from "./components/FlipComponent";
-import ScrollComponent from "./components/ScrollComponent";
 import TextSections from "./components/TextSection";
+import ContactForm from "./components/ContactForm";
+import ProjectSection from "./components/ProjectSection";
 
 export default function App() {
   const ref = useRef(null);
@@ -23,7 +17,7 @@ export default function App() {
   });
 
   return (
-    <div className="bg-[gray]">
+    <div>
       <Header />
       <BackgroundWrapper isInView={isInView} />
       <VerticalTimeline entered={isInView} />
@@ -43,9 +37,12 @@ export default function App() {
             />
           ))}
         </div>
+        <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y z-[200] relative">
+          <ProjectSection />
+        </div>
+        <ContactForm />
+        <Drawer />
       </div>
-
-      <Drawer />
     </div>
   );
 }

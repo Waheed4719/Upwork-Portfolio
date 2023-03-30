@@ -10,7 +10,7 @@ const Drawer = () => {
 
   const drawerVariant = {
     hidden: {
-      x: "-100%",
+      x: "100%",
       transition: {
         duration: 0.5,
       },
@@ -23,26 +23,54 @@ const Drawer = () => {
     },
   };
 
+  const listVariants = {
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delayChildren: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+    hidden: {
+      opacity: 0,
+    },
+  };
+
+  const listItemVariants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
+  };
+
   useEffect(() => {
     if (open) {
       controls.start("visible");
+      document.body.style.overflow = "hidden";
     } else {
       controls.start("hidden");
+      document.body.style.overflow = "auto";
     }
   }, [open]);
 
   return (
     <>
       <div
-        className={`xl:hidden w-full p-[2.5rem] flex justify-start sticky top-0 z-[97] ${
-          scrollY !== 0
-            ? "bg-white py-[2.5rem]"
-            : "bg-transparent pt-[3.5rem] pb-[1.5rem]"
+        className={`xl:hidden w-full p-[1.5rem] flex justify-end fixed top-0 z-[97] ${
+          scrollY !== 0 ? "bg-transparent" : "bg-transparent"
         }`}
       >
         <button
           type="button"
-          className="mr-auto"
+          className=""
           onClick={() => setOpen((prev) => !prev)}
         >
           <svg
@@ -66,9 +94,9 @@ const Drawer = () => {
         variants={drawerVariant}
         initial="hidden"
         animate={controls}
-        className="bg-white shadow-xl w-[calc(100vw-4rem)]  max-w-[400px] fixed top-0 bottom-0 z-[100] left-[0]"
+        className="bg-[rgba(0,0,0,0.6)] shadow-xl w-[calc(100vw-4rem)] flex flex-col justify-between  max-w-[400px] fixed top-0 bottom-0 z-[300] right-[0]"
       >
-        <div className="px-[5.4rem] pt-[3.7rem] flex justify-end">
+        <div className="px-[5.4rem] pt-[1.7rem] flex justify-end">
           <button
             type="button"
             className="mb-[2.4rem] text-[4rem] text-right"
@@ -78,26 +106,25 @@ const Drawer = () => {
           </button>
         </div>
         <nav className="text-[1.4rem] px-[5.4rem] pb-[5vh]">
-          <ul>
+          <motion.ul variants={listVariants} initial="hidden" animate="visible">
             {headerItems.map((item, index) => (
-              <li
+              <motion.li
+                variants={listItemVariants}
                 key={item.title}
-                className={`text-[2.6rem] mb-[2.4rem] text-left ${
-                  index === 0 && "text-[#27B0E6]"
+                className={`text-[1.6rem] mb-[1.4rem] text-right ${
+                  index === 0 && "text-white"
                 }`}
               >
-                <a onClick={() => setOpen(false)} href={item.href}>
+                <a
+                  className="text-white"
+                  onClick={() => setOpen(false)}
+                  href={item.href}
+                >
                   {item.title}
                 </a>
-              </li>
+              </motion.li>
             ))}
-          </ul>
-          <button
-            type="submit"
-            className="rounded-full transition duration-[0.4s] bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-10 py-4"
-          >
-            Join the waiting list
-          </button>
+          </motion.ul>
         </nav>
       </motion.div>
     </>

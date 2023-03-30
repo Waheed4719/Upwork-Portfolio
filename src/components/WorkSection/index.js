@@ -35,7 +35,6 @@ const WorkSection = ({
             2019
           </h1>
         </div>
-        {/* <Typist className="h-[3em]">Animate this text.</Typist> */}
         <TypeAnimation
           sequence={newDescriptions}
           speed={50}
@@ -44,7 +43,15 @@ const WorkSection = ({
         />
         <div className="mt-[20px] mb-4 text-white">{position}</div>
         <div className="flex flex-col">
-          <div className="grid grid-flow-col-dense grid-rows-1 max-h-56 sm:grid-rows-2 place-self-start justify-start gap-2 sm:gap-4">
+          <div className="grid grid-flow-col-dense grid-rows-1 max-h-56 sm:grid-rows-2 place-self-start justify-start gap-2 sm:gap-4 my-6">
+            {/* {icons.map((icon, index) => (
+              <ReactSVG
+                wrapper="span"
+                style={{ height: "100%" }}
+                src={getIcons(icon)}
+                className="w-full max-w-full max-h-full transition-all duration-200"
+              />
+            ))} */}
             {icons.map((icon, index) => (
               <ReactSVG
                 wrapper="span"
@@ -57,7 +64,7 @@ const WorkSection = ({
           <div className="flex flex-wrap mt-[10px]">
             {responsibilities.map((responsibility, index) => (
               <div
-                className={` flex-1 flex p-6 border border-white ${
+                className={` flex-1 flex p-6 border min-w-[150px] border-white ${
                   index === activeResponsibility ? "basis-[100%]" : ""
                 } font-[roboto] text-white`}
                 onClick={() => setActiveResponsibility(index)}

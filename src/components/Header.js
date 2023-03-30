@@ -34,7 +34,7 @@ const headerItems = [
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full py-[15px] px-4 flex justify-end items-center z-[101]">
+    <header className="fixed top-0 left-0 w-full py-[15px] px-4 hidden md:flex justify-end items-center z-[101]">
       <nav>
         <ul className="flex gap-[5px]">
           {headerItems.map((item, index) => (

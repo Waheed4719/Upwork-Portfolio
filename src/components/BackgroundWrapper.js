@@ -6,8 +6,10 @@ const BackgroundWrapper = ({ isInView }) => {
   const [currentState, setCurrentState] = useState("default-state");
 
   useEffect(() => {
+    console.log(isInView);
     if (isInView) {
       setCurrentState("second-state");
+      console.log("setting second state");
     } else {
       setCurrentState("default-state");
     }
@@ -20,40 +22,23 @@ const BackgroundWrapper = ({ isInView }) => {
       isPausedWhenNotInView: true,
       states: {
         "default-state": {
-          gradients: [
-            ["#000", "#000"],
-            // ["#000", "#000", "#000"],
-            // [
-            //   // { color: "rgba(0, 0, 0, 0)", pos: 0 },
-            //   { color: "#000", pos: 0 },
-            //   { color: "#000", pos: 0.2 },
-            //   { color: "#000", pos: 0.75 },
-            //   // { color: "#833ab4", pos: 0.2 },
-            //   // { color: "#fd1d1d", pos: 0.8 },
-            //   // { color: "#38ef7d", pos: 1 },
-            // ],
-            // ["#834D9B", "#D04ED6"],
-            // ["#1A2980", "#26D0CE"],
-            // ["#4568DC", "#B06AB3"],
-          ],
+          gradients: [["#000", "#000"]],
+          loop: true,
+          transitionEasing: "linear",
         },
         "second-state": {
           gradients: [
             // [
-            //   { color: "#9d9d9d", pos: 0 },
-            //   { color: "#10246b", pos: 0.24 },
-            //   { color: "#a50624", pos: 0.69 },
-            //   // { color: "#40e0d0", pos: 0 },
-            //   // { color: "#ff8c00", pos: 0.2 },
-            //   // { color: "#ff0080", pos: 0.75 },
-            // ],
-            // ["#e6e6e6", "#6eda44", "#1d4354"],
-            ["#000", "#000"],
             ["#D31027", "#EA384D"],
             ["#4B1248", "#F72585"],
             ["#2C5364", "#0F2027"],
+            ["#834D9B", "#D04ED6"],
+            ["#1A2980", "#26D0CE"],
+            ["#4568DC", "#B06AB3"],
           ],
-          transitionSpeed: 3000,
+          loop: true,
+          transitionSpeed: 4000,
+          transitionEasing: "easeInOutQuad",
         },
       },
     });
