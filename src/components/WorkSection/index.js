@@ -3,7 +3,6 @@ import { useScroll, useTransform } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import Section from "../Section";
 import { getIcons } from "../../utils/getIcons";
-import DrawSVG from "react-svg-drawing";
 import FlipComponent from "../FlipComponent";
 import { TypeAnimation } from "react-type-animation";
 
