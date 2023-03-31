@@ -71,7 +71,7 @@ const BackgroundWrapper = ({ isInView }) => {
                 key={index}
                 className="bg-item bg-transparent aspect-square anim anim-0 h-8 w-8 bottom-0 absolute"
                 animate={{
-                  y: ["-20vh", "-100vh"],
+                  y: ["0vh", "-100vh"],
                   rotate: [0, 720],
                   opacity: [0.6, 0],
                 }}
@@ -96,10 +96,40 @@ const BackgroundWrapper = ({ isInView }) => {
                   data-original="M100,0 C100,33.33333 100,66.66667 100,100 66.66667,100 33.33333,100 0,100 0,66.66667 0,33.33333 0,0 33.33333,0 66.66667,0 100,0 z"
                 ></path>
               </motion.svg>
+            ) : index % 3 === 0 ? (
+              <motion.svg
+                animate={{
+                  y: ["0vh", "-100vh"],
+                  rotate: [0, 360 * 4],
+                  opacity: [0.6, 0],
+                }}
+                transition={{
+                  duration: 15 - 0.5 * index,
+                  delay: 0,
+                  ease: "linear",
+                  times: [0, 1],
+                  repeat: Infinity,
+                  repeatDelay: 0.5,
+                }}
+                className="h-9 w-9 bottom-0 absolute"
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                data-v-0e667c1f=""
+                style={{ aspectRatio: "inherit", marginBottom: "0px;" }}
+              >
+                <path
+                  data-v-0e667c1f=""
+                  fill="white"
+                  class="transItem"
+                  d="M50 -5 C65.87 4.16 81.75 13.33 97.63 22.5 97.63 40.83 97.63 59.16 97.63 77.5 81.75 86.66 65.87 95.83 50 105 34.12 95.83 18.24 86.66 2.36 77.5 2.36 59.16 2.36 40.83 2.36 22.5 18.24 13.33 34.12 4.16 50 -5 M97.63 22.5 C97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 97.63 22.5 "
+                  data-original="M100,0 C100,33.33333 100,66.66667 100,100 66.66667,100 33.33333,100 0,100 0,66.66667 0,33.33333 0,0 33.33333,0 66.66667,0 100,0 z"
+                ></path>
+              </motion.svg>
             ) : (
               <motion.svg
                 animate={{
-                  y: ["-20vh", "-100vh"],
+                  y: ["0vh", "-100vh"],
                   rotate: [0, 360 * 4],
                   opacity: [0.6, 0],
                 }}

@@ -177,7 +177,8 @@ export const myProjects = [
   {
     id: 1,
     title: "Mel's Kitchen",
-    description: "",
+    description:
+      "Get delicious Food at your doorsteps. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquet at. Magna nam platea justo.",
     image: MelsKitchenImage,
     liveSite: "https://melskitchenreactapi.netlify.app/",
     github: "https://github.com/melanietr98/restaurant-api",
