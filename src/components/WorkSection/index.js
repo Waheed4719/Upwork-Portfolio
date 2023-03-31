@@ -1,9 +1,11 @@
 import React from "react";
 import { works } from "../../assets/json/data";
 import Work from "./Work";
+import SmoothScrolling from "./SmoothScrolling";
 
 const WorkSection = () => (
   <>
+    <SmoothScrolling />
     {works.map((work, index) => (
       <Work
         key={work.title}

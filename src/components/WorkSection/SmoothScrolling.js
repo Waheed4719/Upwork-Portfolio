@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import { motion } from "framer-motion";
-import { useScrollStop, useWindowScroll } from "../hooks";
+import { useScrollStop } from "../../hooks";
 import { useDetectScroll } from "@smakss/react-scroll-direction";
 import { useRef } from "react";
 
 const SmoothScrolling = () => {
   const [scrollDir] = useDetectScroll({});
-  const scrollPosY = useWindowScroll();
   const scrollDirRef = useRef(scrollDir);
 
   useEffect(() => {
@@ -58,7 +56,8 @@ const SmoothScrolling = () => {
       });
     }
   };
-  const debouncedHandleScroll = useScrollStop(handleScroll, 500);
+
+  useScrollStop(handleScroll, 500);
 
   return <></>;
 };
