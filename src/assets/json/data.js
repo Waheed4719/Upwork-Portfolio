@@ -98,7 +98,7 @@ export const works = [
     ],
   },
   {
-    title: "Amazon",
+    title: "Starbucks",
     descriptions: [
       "Forget the old rules. You can have the best people",
       "Find talent your way",
@@ -118,27 +118,27 @@ export const works = [
     responsibilities: [
       {
         id: 1,
-        description: "1. Developed a new feature for the Amazon platform",
+        description: "1. Developed a new feature for the Starbucks platform",
         text: "1. Designed & developed",
       },
       {
         id: 2,
-        description: "2. Developed a new feature for the Amazon platform",
+        description: "2. Developed a new feature for the Starbucks platform",
         text: "2. Created",
       },
       {
         id: 3,
-        description: "3. Developed a new feature for the Amazon platform",
+        description: "3. Developed a new feature for the Starbucks platform",
         text: "3. Optimized",
       },
       {
         id: 4,
-        description: "4. Developed a new feature for the Amazon platform",
+        description: "4. Developed a new feature for the Starbucks platform",
         text: "4. Increased",
       },
       {
         id: 5,
-        description: "5. Developed a new feature for the Amazon platform",
+        description: "5. Developed a new feature for the Starbucks platform",
         text: "5. Mentored",
       },
     ],

@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import VerticalTimeline from "./components/VerticalTimeline";
 import BackgroundWrapper from "./components/BackgroundWrapper";
-import { works } from "./assets/json/data";
 import Header from "./components/Header";
 import WorkSection from "./components/WorkSection";
 import Drawer from "./components/Drawer";
@@ -10,6 +9,8 @@ import TextSections from "./components/TextSection";
 import ContactForm from "./components/ContactForm";
 import MyProjects from "./components/MyProjects";
 import SmoothScrolling from "./components/SmoothScrolling";
+import VerticalSlider from "./components/VerticalSlider";
+import { useScrollStopListener } from "./hooks";
 
 export default function App() {
   const ref = useRef(null);
@@ -23,20 +24,14 @@ export default function App() {
       <VerticalTimeline entered={isInView} />
       <div className="relative z-[200]">
         <TextSections />
-        {/* <SmoothScrolling /> */}
+        <SmoothScrolling />
+        {/* <VerticalSlider /> */}
         <div
           ref={ref}
+          id="work"
           className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative"
         >
-          {works.map((work) => (
-            <WorkSection
-              title={work.title}
-              descriptions={work.descriptions}
-              icons={work.icons}
-              position={work.position}
-              responsibilities={work.responsibilities}
-            />
-          ))}
+          <WorkSection />
         </div>
         <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative mb-4 pb-[2rem]">
           <MyProjects />

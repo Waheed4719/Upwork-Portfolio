@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const BackgroundWrapper = ({ isInView }) => {
   const [currentState, setCurrentState] = useState("default-state");
   const canvasRef = useRef(null);
+
   useEffect(() => {
     if (isInView) {
       setCurrentState("second-state");
-      console.log("setting second state");
     } else {
       setCurrentState("default-state");
     }
@@ -19,15 +19,17 @@ const BackgroundWrapper = ({ isInView }) => {
       element: canvasRef.current,
       direction: "diagonal",
       isPausedWhenNotInView: true,
+      stateTransitionSpeed: 1000,
+      stateTransitionEasing: "easeInOutQuad",
       states: {
         "default-state": {
           gradients: [["#000", "#000"]],
           loop: true,
-          transitionEasing: "linear",
+          transitionSpeed: 1000,
+          transitionEasing: "easeInOutQuad",
         },
         "second-state": {
           gradients: [
-            // [
             ["#D31027", "#EA384D"],
             ["#4B1248", "#F72585"],
             ["#2C5364", "#0F2027"],
@@ -36,7 +38,7 @@ const BackgroundWrapper = ({ isInView }) => {
             ["#4568DC", "#B06AB3"],
           ],
           loop: true,
-          transitionSpeed: 4000,
+          transitionSpeed: 3000,
           transitionEasing: "easeInOutQuad",
         },
       },
@@ -44,7 +46,7 @@ const BackgroundWrapper = ({ isInView }) => {
     granimInstance.changeState(currentState);
     granimInstance.play();
 
-    // return () => granimInstance.destroy();
+    return () => granimInstance.destroy();
   }, [currentState]);
 
   return (
@@ -66,6 +68,7 @@ const BackgroundWrapper = ({ isInView }) => {
           <div className="flex flex-1">
             {index % 2 === 0 ? (
               <motion.svg
+                key={index}
                 className="bg-item bg-transparent aspect-square anim anim-0 h-8 w-8 bottom-0 absolute"
                 animate={{
                   y: ["-20vh", "-100vh"],

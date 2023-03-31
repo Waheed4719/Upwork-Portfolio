@@ -20,7 +20,6 @@ const VanillaJSIcon = ({ strokeColor }) => {
           repeatDelay: 1,
         }}
         d="M1.408 1.408h125.184v125.185H1.408z"
-        stroke
         strokeWidth={4}
         strokeDasharray="0 1"
         fill="none"

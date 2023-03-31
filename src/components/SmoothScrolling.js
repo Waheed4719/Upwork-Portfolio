@@ -1,76 +1,69 @@
-import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { useScrollStop, useWindowScroll } from "../hooks";
+import { useDetectScroll } from "@smakss/react-scroll-direction";
+import { useRef } from "react";
 
-function App() {
-  const [sectionIndex, setSectionIndex] = useState(0);
-  const { scrollY } = useScroll();
-  const sectionOffsets = [0, 1, 2].map((i) => i * window.innerHeight);
+const SmoothScrolling = () => {
+  const [scrollDir] = useDetectScroll({});
+  const scrollPosY = useWindowScroll();
+  const scrollDirRef = useRef(scrollDir);
 
   useEffect(() => {
-    const unsubscribeY = scrollY.onChange((y) => {
-      const currentIndex = sectionOffsets.findIndex(
-        (offset) => y >= offset && y < offset + window.innerHeight
-      );
-      if (currentIndex !== sectionIndex) {
-        setSectionIndex(currentIndex);
-      }
-    });
-    return () => {
-      unsubscribeY();
-    };
-  }, [scrollY, sectionIndex, sectionOffsets]);
+    scrollDirRef.current = scrollDir;
+  }, [scrollDir]);
 
-  const handleSectionChange = (index) => {
-    setSectionIndex(index);
+  const handleScroll = (e) => {
+    console.log("scroll stopped", scrollDirRef.current);
+    const scrollDirection = scrollDirRef.current;
+    const scrollPosY = window.scrollY;
+    let offsetTop = document
+      .getElementById("work0")
+      .getBoundingClientRect().top;
+    let offsetTop1 = document
+      .getElementById("work1")
+      .getBoundingClientRect().top;
+    let offsetTop2 = document
+      .getElementById("work2")
+      .getBoundingClientRect().top;
+    console.log(offsetTop, scrollPosY, scrollDirection);
+    if (
+      (scrollDirection === "down" && offsetTop <= 600 && offsetTop > 0) ||
+      (scrollDirection === "up" &&
+        offsetTop < 0 &&
+        offsetTop1 > 0 &&
+        offsetTop2 > 0)
+    ) {
+      document.getElementById("work0").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+    if (
+      (scrollDirection === "down" && offsetTop < 0 && offsetTop1 >= 0) ||
+      (scrollDirection === "up" && offsetTop1 < 0 && offsetTop2 > 0)
+    ) {
+      document.getElementById("work1").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+    if (
+      (scrollDirection === "down" && offsetTop1 < 0 && offsetTop2 >= 0) ||
+      (scrollDirection === "up" && offsetTop2 < 0)
+    ) {
+      document.getElementById("work2").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
   };
+  const debouncedHandleScroll = useScrollStop(handleScroll, 500);
 
-  return (
-    <div style={{ height: "300vh" }}>
-      {sectionOffsets.map((offset, i) => (
-        <Section
-          key={i}
-          offset={offset}
-          index={i}
-          sectionIndex={sectionIndex}
-          onSectionChange={handleSectionChange}
-        />
-      ))}
-    </div>
-  );
-}
+  return <></>;
+};
 
-function Section({ offset, index, sectionIndex, onSectionChange }) {
-  const { scrollY } = useScroll();
-  const translateY = useTransform(scrollY, (value) => value - offset);
-
-  const handleClick = () => {
-    onSectionChange(index);
-  };
-
-  return (
-    <motion.div
-      style={{
-        height: "100vh",
-        background: index % 2 === 0 ? "white" : "gray",
-      }}
-      animate={{ y: -sectionIndex * window.innerHeight }}
-      transition={{ type: "spring", damping: 200, stiffness: 500 }}
-      onClick={handleClick}
-    >
-      <motion.div
-        style={{
-          height: "100%",
-          width: "100%",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          translateY,
-        }}
-      >
-        {/* Your section content goes here */}
-      </motion.div>
-    </motion.div>
-  );
-}
-
-export default App;
+export default SmoothScrolling;

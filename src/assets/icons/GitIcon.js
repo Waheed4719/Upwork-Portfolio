@@ -19,7 +19,6 @@ const GitIcon = ({ strokeColor }) => {
           repeatType: "loop",
           repeatDelay: 1,
         }}
-        stroke
         strokeWidth={4}
         strokeDasharray="0 1"
         fill="none"

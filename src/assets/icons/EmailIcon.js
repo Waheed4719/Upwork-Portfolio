@@ -19,7 +19,6 @@ const EmailIcon = ({ strokeColor }) => {
           repeatType: "loop",
           repeatDelay: 1,
         }}
-        stroke
         strokeWidth={1}
         strokeDasharray="0 1"
         strokeLinecap="round"

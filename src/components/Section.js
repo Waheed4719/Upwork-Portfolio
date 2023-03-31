@@ -6,7 +6,7 @@ const Section = ({ children, style, id }) => {
     <motion.div
       id={id}
       style={{ ...style }}
-      className={`h-screen flex items-center justify-center bg-transparent relative pt-[60px] z-[11] snap-start`}
+      className={`h-screen flex items-center justify-center bg-transparent relative pt-[60px] z-[11]`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
