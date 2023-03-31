@@ -10,8 +10,8 @@ const GithubIcon = ({ strokeColor }) => {
       className="pointer-events-auto customSvg"
     >
       <motion.path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
@@ -29,8 +29,8 @@ const GithubIcon = ({ strokeColor }) => {
       />
 
       <motion.path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{

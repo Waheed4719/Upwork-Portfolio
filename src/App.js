@@ -8,7 +8,6 @@ import WorkSection from "./components/WorkSection";
 import Drawer from "./components/Drawer";
 import TextSections from "./components/TextSection";
 import ContactForm from "./components/ContactForm";
-import ProjectSection from "./components/ProjectSection";
 import MyProjects from "./components/MyProjects";
 
 export default function App() {
@@ -25,7 +24,7 @@ export default function App() {
         <TextSections />
         <div
           ref={ref}
-          className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y z-[200] relative"
+          className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative"
         >
           {works.map((work) => (
             <WorkSection
@@ -37,10 +36,7 @@ export default function App() {
             />
           ))}
         </div>
-        {/* <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y z-[200] relative mb-4 pb-[2rem]">
-          <ProjectSection />
-        </div> */}
-        <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y z-[200] relative mb-4 pb-[2rem]">
+        <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative mb-4 pb-[2rem]">
           <MyProjects />
         </div>
         <ContactForm />

@@ -50,7 +50,7 @@ const Section1 = () => {
           className="text-[#217017] text-3xl  mb-2"
           repeat={Infinity}
         />
-        <h1 className="text-5xl text-white mt-4">Junaid Ahmed</h1>
+        <h1 className="text-5xl text-white mt-4">Melanie R.</h1>
         <AnimatePresence>
           <motion.span
             style={{ position: "absolute" }}

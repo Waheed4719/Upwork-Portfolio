@@ -6,7 +6,6 @@ const BackgroundWrapper = ({ isInView }) => {
   const [currentState, setCurrentState] = useState("default-state");
 
   useEffect(() => {
-    console.log(isInView);
     if (isInView) {
       setCurrentState("second-state");
       console.log("setting second state");
@@ -45,7 +44,7 @@ const BackgroundWrapper = ({ isInView }) => {
 
     granimInstance.changeState(currentState);
 
-    return () => granimInstance.destroy();
+    // return () => granimInstance.destroy();
   }, [currentState]);
 
   return (
