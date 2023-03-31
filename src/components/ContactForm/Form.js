@@ -30,7 +30,7 @@ const Form = () => {
       <h1 className="text-white mb-4 text-center">Contact Form</h1>
       <form
         target="_blank"
-        action="https://formsubmit.co/your@email.com"
+        action="https://formsubmit.co/Meltrodriguess@gmail.com"
         method="POST"
         onSubmit={handleSubmit}
       >
