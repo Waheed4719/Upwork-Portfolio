@@ -169,7 +169,7 @@ export const headerItems = [
   },
   {
     name: "Email",
-    href: "#",
+    href: "mailto:Meltrodriguess@gmail.com",
     icon: "email",
   },
 ];
