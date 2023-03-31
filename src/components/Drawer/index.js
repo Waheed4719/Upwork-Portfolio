@@ -91,6 +91,7 @@ const Drawer = () => {
                     variants={listItemVariants}
                     initial="hidden"
                     animate="visible"
+                    exit="hidden"
                     key={item.name}
                     className={`text-[1.6rem] mb-[1.4rem] text-right ${
                       index === 0 && "text-white"
@@ -112,7 +113,13 @@ const Drawer = () => {
                     </a>
                   </motion.li>
                 ))}
-                <div className="flex gap-4 ">
+                <motion.div
+                  variants={listItemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  className="flex gap-4 "
+                >
                   {headerItems.slice(3).map((item, index) => (
                     <motion.li
                       variants={listItemVariants}
@@ -139,7 +146,7 @@ const Drawer = () => {
                       </a>
                     </motion.li>
                   ))}
-                </div>
+                </motion.div>
               </motion.ul>
             </nav>
           </motion.div>
