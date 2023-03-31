@@ -9,6 +9,7 @@ import Drawer from "./components/Drawer";
 import TextSections from "./components/TextSection";
 import ContactForm from "./components/ContactForm";
 import MyProjects from "./components/MyProjects";
+import SmoothScrolling from "./components/SmoothScrolling";
 
 export default function App() {
   const ref = useRef(null);
@@ -22,6 +23,7 @@ export default function App() {
       <VerticalTimeline entered={isInView} />
       <div className="relative z-[200]">
         <TextSections />
+        {/* <SmoothScrolling /> */}
         <div
           ref={ref}
           className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative"

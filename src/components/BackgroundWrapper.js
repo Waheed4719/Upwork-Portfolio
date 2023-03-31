@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Granim from "granim";
 import { motion } from "framer-motion";
 
 const BackgroundWrapper = ({ isInView }) => {
   const [currentState, setCurrentState] = useState("default-state");
-
+  const canvasRef = useRef(null);
   useEffect(() => {
     if (isInView) {
       setCurrentState("second-state");
@@ -16,7 +16,7 @@ const BackgroundWrapper = ({ isInView }) => {
 
   useEffect(() => {
     const granimInstance = new Granim({
-      element: "#granim-canvas",
+      element: canvasRef.current,
       direction: "diagonal",
       isPausedWhenNotInView: true,
       states: {
@@ -41,8 +41,8 @@ const BackgroundWrapper = ({ isInView }) => {
         },
       },
     });
-
     granimInstance.changeState(currentState);
+    granimInstance.play();
 
     // return () => granimInstance.destroy();
   }, [currentState]);
@@ -51,6 +51,7 @@ const BackgroundWrapper = ({ isInView }) => {
     <div className="fixed bg-transparent flex h-screen w-screen z-[10] pointer-events-auto">
       <canvas
         id="granim-canvas"
+        ref={canvasRef}
         style={{
           position: "absolute",
           top: 0,
