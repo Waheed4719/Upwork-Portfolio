@@ -22,12 +22,11 @@ const Card = ({
   <motion.div
     variants={item}
     // onClick={() => liveSite && window.open(liveSite, "_blank", "noreferrer")}
-    className={`bg-[transparent] border border-white flex flex-col  hover:bg-red hover:text-white rounded-md shadow-md text-left group cursor-pointer relative overflow-hidden ${
+    className={`bg-[transparent] flex flex-col  hover:bg-red hover:text-white rounded-md shadow-md text-left group cursor-pointer relative overflow-hidden ${
       !liveSite && "cursor-not-allowed"
     }`}
   >
     <div className="hidden   absolute top-[10px] right-[10px] group-hover:flex group-hover:gap-3  rounded-md">
-      {/* <Icon iconName={`${link ? "visibility" : "visibilityOff"}`} /> */}
       <a
         href={github}
         className="p-2 group-hover:bg-[rgba(0,0,0,0.5)] rounded-md"
