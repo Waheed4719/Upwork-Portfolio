@@ -6,13 +6,13 @@ import TipCalculatorImage from "../images/tipcalculator.png";
 
 export const works = [
   {
-    title: "Amazon",
+    title: "Per Scholas",
     descriptions: [
       "Forget the old rules. You can have the best people",
       "Find talent your way",
       "How work should work",
     ],
-    position: "Senior Software Engineer",
+    position: "Software Engineer Fellow",
     icons: [
       "nodejs",
       "nuxtjs",
@@ -26,39 +26,39 @@ export const works = [
     responsibilities: [
       {
         id: 1,
-        description: "1. Developed a new feature for the Amazon platform",
+        description: "1. Developed a new feature for the Per Scholas platform",
         text: "1. Designed & developed",
       },
       {
         id: 2,
-        description: "2. Developed a new feature for the Amazon platform",
+        description: "2. Developed a new feature for the Per Scholas platform",
         text: "2. Created",
       },
       {
         id: 3,
-        description: "3. Developed a new feature for the Amazon platform",
+        description: "3. Developed a new feature for the Per Scholas platform",
         text: "1. Optimized",
       },
       {
         id: 4,
-        description: "4. Developed a new feature for the Amazon platform",
+        description: "4. Developed a new feature for the Per Scholas platform",
         text: "1. Increased",
       },
       {
         id: 5,
-        description: "5. Developed a new feature for the Amazon platform",
+        description: "5. Developed a new feature for the Per Scholas platform",
         text: "1. Mentored",
       },
     ],
   },
   {
-    title: "KPI Deck",
+    title: "Citizens",
     descriptions: [
       "A saas startup",
       "Gain track of your amazon expenses",
       "Find where all your profit is going",
     ],
-    position: "Senior Software Engineer",
+    position: "Junior Software Engineer",
     icons: [
       "nodejs",
       "nuxtjs",
@@ -72,39 +72,39 @@ export const works = [
     responsibilities: [
       {
         id: 1,
-        description: "1. Developed a new feature for the Amazon platform",
+        description: "1. Developed a new feature for the Citizens platform",
         text: "1. Designed & developed",
       },
       {
         id: 2,
-        description: "2. Developed a new feature for the Amazon platform",
+        description: "2. Developed a new feature for the Citizens platform",
         text: "2. Created",
       },
       {
         id: 3,
-        description: "3. Developed a new feature for the Amazon platform",
+        description: "3. Developed a new feature for the Citizens platform",
         text: "1. Optimized",
       },
       {
         id: 4,
-        description: "4. Developed a new feature for the Amazon platform",
+        description: "4. Developed a new feature for the Citizens platform",
         text: "1. Increased",
       },
       {
         id: 5,
-        description: "5. Developed a new feature for the Amazon platform",
+        description: "5. Developed a new feature for the Citizens platform",
         text: "1. Mentored",
       },
     ],
   },
   {
-    title: "Starbucks",
+    title: "Freelance",
     descriptions: [
       "Forget the old rules. You can have the best people",
       "Find talent your way",
       "How work should work",
     ],
-    position: "Senior Software Engineer",
+    position: "Software Engineer",
     icons: [
       "nodejs",
       "nuxtjs",
@@ -118,27 +118,27 @@ export const works = [
     responsibilities: [
       {
         id: 1,
-        description: "1. Developed a new feature for the Starbucks platform",
+        description: "1. Developed a new feature for the platform",
         text: "1. Designed & developed",
       },
       {
         id: 2,
-        description: "2. Developed a new feature for the Starbucks platform",
+        description: "2. Developed a new feature for the platform",
         text: "2. Created",
       },
       {
         id: 3,
-        description: "3. Developed a new feature for the Starbucks platform",
+        description: "3. Developed a new feature for the platform",
         text: "3. Optimized",
       },
       {
         id: 4,
-        description: "4. Developed a new feature for the Starbucks platform",
+        description: "4. Developed a new feature for the platform",
         text: "4. Increased",
       },
       {
         id: 5,
-        description: "5. Developed a new feature for the Starbucks platform",
+        description: "5. Developed a new feature for the platform",
         text: "5. Mentored",
       },
     ],
