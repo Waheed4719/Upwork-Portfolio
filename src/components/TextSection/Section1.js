@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 const texts = [
   "a DIY enthusiast",
   "a software engineer",
-  "a fullstack developer",
+  "a full stack developer",
 ];
 const variants = {
   enter: (direction) => {
@@ -50,7 +50,7 @@ const Section1 = () => {
           className="text-[#217017] text-3xl  mb-2"
           repeat={Infinity}
         />
-        <h1 className="text-5xl text-white mt-4">Melanie R.</h1>
+        <h1 className="text-5xl text-white mt-4">Melanie Rodrigues</h1>
         <AnimatePresence>
           <motion.span
             style={{ position: "absolute" }}
@@ -60,11 +60,6 @@ const Section1 = () => {
             animate="center"
             exit="exit"
             className="text-2xl mt-4 text-white"
-            // transition={{
-            //   y: { type: "spring", stiffness: 300, damping: 200 },
-            //   opacity: { duration: 1 },
-            // }}
-
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             {texts[index]}

@@ -21,8 +21,6 @@ export default function App() {
       <VerticalTimeline entered={isInView} />
       <div className="relative z-[200]">
         <TextSections />
-
-        {/* <VerticalSlider /> */}
         <div
           ref={ref}
           id="work"
