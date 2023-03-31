@@ -37,17 +37,17 @@ export const works = [
       {
         id: 3,
         description: "3. Developed a new feature for the Per Scholas platform",
-        text: "1. Optimized",
+        text: "3. Optimized",
       },
       {
         id: 4,
         description: "4. Developed a new feature for the Per Scholas platform",
-        text: "1. Increased",
+        text: "4. Increased",
       },
       {
         id: 5,
         description: "5. Developed a new feature for the Per Scholas platform",
-        text: "1. Mentored",
+        text: "5. Mentored",
       },
     ],
   },
@@ -83,17 +83,17 @@ export const works = [
       {
         id: 3,
         description: "3. Developed a new feature for the Citizens platform",
-        text: "1. Optimized",
+        text: "3. Optimized",
       },
       {
         id: 4,
         description: "4. Developed a new feature for the Citizens platform",
-        text: "1. Increased",
+        text: "4. Increased",
       },
       {
         id: 5,
         description: "5. Developed a new feature for the Citizens platform",
-        text: "1. Mentored",
+        text: "5. Mentored",
       },
     ],
   },
