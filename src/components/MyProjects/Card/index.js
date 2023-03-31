@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import GithubIcon from "../../../assets/icons/github2.svg";
+import LinkIcon from "../../../assets/icons/link.svg";
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -20,7 +21,7 @@ const Card = ({
 }) => (
   <motion.div
     variants={item}
-    onClick={() => liveSite && window.open(liveSite, "_blank", "noreferrer")}
+    // onClick={() => liveSite && window.open(liveSite, "_blank", "noreferrer")}
     className={`bg-[transparent] border border-white flex flex-col  hover:bg-red hover:text-white rounded-md shadow-md text-left group cursor-pointer relative overflow-hidden ${
       !liveSite && "cursor-not-allowed"
     }`}
@@ -34,10 +35,10 @@ const Card = ({
         <ReactSVG src={GithubIcon} className="h-8 w-8" />
       </a>
       <a
-        href={github}
+        href={liveSite}
         className="p-2 group-hover:bg-[rgba(0,0,0,0.5)] rounded-md"
       >
-        <ReactSVG src={GithubIcon} className="h-8 w-8" />
+        <ReactSVG src={LinkIcon} className="h-8 w-8 customSvg text-white" />
       </a>
     </div>
     <img src={image} alt={`${title}`} />

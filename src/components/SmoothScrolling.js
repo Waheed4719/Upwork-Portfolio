@@ -14,9 +14,7 @@ const SmoothScrolling = () => {
   }, [scrollDir]);
 
   const handleScroll = (e) => {
-    console.log("scroll stopped", scrollDirRef.current);
     const scrollDirection = scrollDirRef.current;
-    const scrollPosY = window.scrollY;
     let offsetTop = document
       .getElementById("work0")
       .getBoundingClientRect().top;
@@ -26,7 +24,6 @@ const SmoothScrolling = () => {
     let offsetTop2 = document
       .getElementById("work2")
       .getBoundingClientRect().top;
-    console.log(offsetTop, scrollPosY, scrollDirection);
     if (
       (scrollDirection === "down" && offsetTop <= 600 && offsetTop > 0) ||
       (scrollDirection === "up" &&
@@ -52,7 +49,7 @@ const SmoothScrolling = () => {
     }
     if (
       (scrollDirection === "down" && offsetTop1 < 0 && offsetTop2 >= 0) ||
-      (scrollDirection === "up" && offsetTop2 < 0)
+      (scrollDirection === "up" && offsetTop2 < 0 && offsetTop2 > -500)
     ) {
       document.getElementById("work2").scrollIntoView({
         behavior: "smooth",

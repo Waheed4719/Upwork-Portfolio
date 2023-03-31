@@ -98,6 +98,11 @@ svg:not(.customSvg):hover path {
   fill-opacity: 50% !important;
   stroke: #000 !important;
 }
+a svg:not(.customSvg):hover path {
+  fill-opacity: 50% !important;
+  stroke: rgba(255, 255, 255, 0.6) !important;
+}
+
 .dev-icon svg:hover path {
   stroke: #fff !important;
 }

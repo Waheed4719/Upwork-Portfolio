@@ -34,9 +34,16 @@ const Responsibilities = ({ data }) => {
           layout
           className={` flex-1 flex p-6 border min-w-[150px] border-white ${
             index === 0 ? "basis-[100%]" : ""
-          } font-[roboto] text-white`}
+          } font-[roboto] text-white cursor-pointer   `}
         >
-          {index === 0 ? responsibility.description : responsibility.text}
+          <p
+            className={` ${
+              index !== 0 &&
+              "before:bg-white before:h-1 hover:before:w-full before:bottom-[-5px] before:left-0 before:w-0 before:absolute relative before:transition-all duration-200"
+            } `}
+          >
+            {index === 0 ? responsibility.description : responsibility.text}
+          </p>
         </motion.div>
       ))}
     </div>
