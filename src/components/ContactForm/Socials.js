@@ -7,7 +7,7 @@ const Socials = () => {
   return (
     <div className="min-h-[350px] flex flex-col items-center justify-center flex-1 ">
       <h1 className="mb-4">My Socials</h1>
-      <div className="w-fit h-[60px] flex gap-4 justify-center">
+      <div className="w-[200px] h-[60px] flex gap-4 justify-center">
         <a href="mailto:abc@gmail.com">
           <EmailIcon />
         </a>
