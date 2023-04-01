@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-const texts = [
-  "a DIY enthusiast",
-  "a software engineer",
-  "a full stack developer",
-];
+const texts = ["a DIY enthusiast", "a full stack software engineer"];
 const variants = {
   enter: (direction) => {
     return {
