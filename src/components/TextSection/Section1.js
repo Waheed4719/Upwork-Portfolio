@@ -1,27 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-
-const variants = {
-  enter: (direction) => {
-    return {
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      opacity: 0,
-    };
-  },
-};
 
 const Section1 = () => {
   return (
