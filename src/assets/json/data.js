@@ -3,6 +3,7 @@ import PokemonImage from "../images/pokemonPVP.png";
 import MyWebpage from "../images/mywebpage.png";
 import MelsKitchenImage from "../images/melskitchen.png";
 import TipCalculatorImage from "../images/tipcalculator.png";
+import NoteTakingApp from "../images/notetakingapp.png";
 
 export const works = [
   {
@@ -143,8 +144,59 @@ export const works = [
       },
     ],
   },
+  {
+    title: "Shields Health",
+    position: "Patient Care Representative",
+    descriptions: ["A healthcare company"],
+    icons: [],
+    responsibilities: [
+      {
+        id: 1,
+        description: `1. Assisted 200+ patients in navigating the healthcare system by answering inquiries over the phone and in person,
+          resulting in a 95% patient satisfaction rate as measured by monthly surveys.`,
+        text: "1. Assisted",
+      },
+      {
+        id: 2,
+        description:
+          "2. Efficiently scheduled appointments for 200+ patients per month, reducing average wait times by 10%.",
+        text: "2. Scheduled",
+      },
+      {
+        id: 3,
+        description:
+          "3. Efficiently scheduled appointments for 200+ patients per month, reducing average wait times by 10%.",
+        text: "3. Scheduled",
+      },
+    ],
+  },
+  {
+    title: "Porter Pediatrics",
+    position: "Medical administrative Assistant",
+    descriptions: ["A healthcare company"],
+    icons: [],
+    responsibilities: [
+      {
+        id: 1,
+        description: `1. Provided exceptional customer service as the first point of contact for the practice, managing incoming calls and
+        greeting patients at the front desk, resulting in a 25% increase in patient satisfaction as measured by monthly surveys.`,
+        text: "1. Provided",
+      },
+      {
+        id: 2,
+        description: `2. Efficiently scheduled appointments for 150+ patients per month, streamlining office operations and reducing wait times
+          by 15%. -Maintained accurate and up-to-date medical records for 500+ patients, ensuring seamless care coordination
+          and reducing record-keeping errors by 30%`,
+        text: "2. Scheduled",
+      },
+    ],
+  },
 ];
 export const headerItems = [
+  {
+    name: "Resume",
+    href: "https://drive.google.com/file/d/1sLSxvlY2gEaX928Y_Iji8Qg_ZmnacJyO/view?usp=drivesdk",
+  },
   {
     name: "Work",
     href: "#work",
@@ -206,16 +258,16 @@ export const myProjects = [
   },
   {
     id: 4,
-    title: "Melanie's Webpage",
-    description: "Webpage to share my personalized content on the web",
-    image: MyWebpage,
-    liveSite: "https://melanietr98.github.io/",
+    title: "Note Taking App",
+    description: "An app that allows you to take notes",
+    image: NoteTakingApp,
+    liveSite: "https://note-talking-app.onrender.com/auth",
     technologies: ["vanilljs", "css3"],
   },
   {
     id: 5,
     title: "Tip Calculator",
-    description: "",
+    description: "A calculator app that allows you to calculate tips",
     image: TipCalculatorImage,
     liveSite: "https://github.com/melanietr98/tip-calculator",
     technologies: ["nodejs", "expressjs"],

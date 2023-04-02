@@ -5,7 +5,7 @@ import SmoothScrolling from "./SmoothScrolling";
 
 const WorkSection = () => (
   <>
-    <SmoothScrolling />
+    <SmoothScrolling elementId="work" />
     {works.map((work, index) => (
       <Work
         key={work.title}

@@ -6,13 +6,13 @@ const BackgroundWrapper = ({ isInView }) => {
   const [currentState, setCurrentState] = useState("default-state");
   const canvasRef = useRef(null);
 
-  useEffect(() => {
-    if (isInView) {
-      setCurrentState("second-state");
-    } else {
-      setCurrentState("default-state");
-    }
-  }, [isInView]);
+  // useEffect(() => {
+  //   if (isInView) {
+  //     setCurrentState("second-state");
+  //   } else {
+  //     setCurrentState("default-state");
+  //   }
+  // }, [isInView]);
 
   useEffect(() => {
     const granimInstance = new Granim({
@@ -21,21 +21,85 @@ const BackgroundWrapper = ({ isInView }) => {
       isPausedWhenNotInView: true,
       stateTransitionSpeed: 1000,
       stateTransitionEasing: "easeInOutQuad",
+      // ["#fcf5d8", "#fcf5d8"],
+      // ["#F492C5", "#EEA4C7"],
+      // ["#E8A7C9", "#E2B0CB"],
+      // ["#DCADC9", "#D6B5CC"],
+      // ["#D1B4C7", "#CCBBCD"],
+      // ["#C4B3C1", "#BFB9CA"],
+      // ["#B5ADBB", "#B1B2C6"],
       states: {
         "default-state": {
-          gradients: [["#000", "#000"]],
+          gradients: [
+            ["#133894", "#A50086"],
+            ["#133894", "#B40082"],
+            ["#133894", "#C3007E"],
+            ["#133894", "#D2007A"],
+            ["#133894", "#E10076"],
+            ["#133894", "#F00072"],
+            ["#133894", "#FF006E"],
+          ],
           loop: true,
           transitionSpeed: 1000,
           transitionEasing: "easeInOutQuad",
         },
         "second-state": {
           gradients: [
-            ["#D31027", "#EA384D"],
-            ["#4B1248", "#F72585"],
-            ["#2C5364", "#0F2027"],
-            ["#834D9B", "#D04ED6"],
-            ["#1A2980", "#26D0CE"],
-            ["#4568DC", "#B06AB3"],
+            // ["#D31027", "#EA384D"],
+            // ["#4B1248", "#F72585"],
+            // ["#2C5364", "#0F2027"],
+            // ["#834D9B", "#D04ED6"],
+            // ["#1A2980", "#26D0CE"],
+            // ["#4568DC", "#B06AB3"],
+
+            // ["#F8D4E1", "#FBD8E8"],
+            // ["#FAD5E5", "#FCDBEF"],
+            // ["#FCD6E9", "#FEE0F5"],
+            // ["#FED7ED", "#FFE6FB"], // purple gradient
+            // ["#FED7ED", "#EFDFFD"], // lavender gradient
+            // ["#E3D3F8", "#D6D8FF"], // blue gradient
+            // ["#C9CFFD", "#BDD6FF"],
+            // ["#AED6FF", "#B0E1FF"],
+            // ["#94DDFF", "#A7EDFF"],
+
+            ["#F492C5", "#EEA4C7"],
+            ["#E8A7C9", "#E2B0CB"],
+            ["#DCADC9", "#D6B5CC"],
+            ["#D1B4C7", "#CCBBCD"],
+            ["#C4B3C1", "#BFB9CA"],
+            ["#B5ADBB", "#B1B2C6"],
+            ["#A59CB4", "#A1A9C1"],
+            ["#938EB0", "#919AC1"],
+            ["#827FA8", "#818CC1"],
+            ["#706FA0", "#6E7DC0"],
+            ["#5E5E98", "#5C6AC0"],
+            ["#4D4C90", "#4C58BE"],
+            ["#3B3A88", "#3A47BC"],
+            ["#292A80", "#2935BA"],
+            ["#171A78", "#1822B8"],
+            ["#051C70", "#0A18B2"],
+            ["#042b8c", "#0F12AE"],
+            ["#042b8c", "#1E0DA8"],
+            ["#042b8c", "#2D08A2"],
+            ["#042b8c", "#3C03A2"],
+            ["#042b8c", "#4B009E"],
+            ["#042b8c", "#5A009A"],
+            ["#042b8c", "#690096"],
+            ["#042b8c", "#780092"],
+            ["#042b8c", "#87008E"],
+            ["#042b8c", "#96008A"],
+            ["#042b8c", "#A50086"],
+            ["#042b8c", "#B40082"],
+            ["#042b8c", "#C3007E"],
+            ["#042b8c", "#D2007A"],
+            ["#042b8c", "#E10076"],
+            ["#042b8c", "#F00072"],
+            ["#042b8c", "#FF006E"],
+            ["#042b8c", "#FF116A"],
+            ["#042b8c", "#FF2266"],
+            ["#042b8c", "#FF3362"],
+            ["#042b8c", "#FF445E"],
+            ["#042b8c", "#FF555A"],
           ],
           loop: true,
           transitionSpeed: 3000,

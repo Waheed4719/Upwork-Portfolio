@@ -1,4 +1,4 @@
-import { motion, AnimationControls } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Card from "../Card";
 
@@ -27,9 +27,10 @@ const CardGrid = ({ data, controls, inView }) => {
       initial="hidden"
       className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid max-w-full mx-auto gap-[4rem] lg:max-w-[1200px]"
     >
-      {data.map((item) => (
+      {data.map((item, index) => (
         <Card
           key={item.title}
+          index={index}
           liveSite={item.liveSite}
           github={item.github}
           image={item.image}

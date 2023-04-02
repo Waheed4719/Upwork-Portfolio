@@ -8,11 +8,6 @@ const VerticalSlider = () => {
     setScrollY(e.target.scrollTop);
   };
 
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
   return (
     <motion.div
       className="no-scrollbar"
@@ -24,7 +19,6 @@ const VerticalSlider = () => {
         WebkitOverflowScrolling: "touch",
       }}
       onScroll={handleScroll}
-      onViewportEnter={() => console.log("enter")}
     >
       <motion.div
         className="bg-red-200"

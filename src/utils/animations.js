@@ -1,9 +1,9 @@
-export const ModalAnim = (y, duration) => {
+export const ModalAnim = (duration) => {
   return {
-    hidden: { opacity: 0, y },
+    hidden: { opacity: 0, scale: 0.9 },
     show: {
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: {
         duration: duration ?? 0.3,
         ease: "easeOut",

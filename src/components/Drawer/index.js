@@ -86,7 +86,7 @@ const Drawer = () => {
                 exit="hidden"
                 className="flex flex-col items-end"
               >
-                {headerItems.slice(0, 3).map((item, index) => (
+                {headerItems.slice(0, 4).map((item, index) => (
                   <motion.li
                     variants={listItemVariants}
                     initial="hidden"
@@ -120,7 +120,7 @@ const Drawer = () => {
                   exit="hidden"
                   className="flex gap-4 "
                 >
-                  {headerItems.slice(3).map((item, index) => (
+                  {headerItems.slice(4).map((item, index) => (
                     <motion.li
                       variants={listItemVariants}
                       initial="hidden"

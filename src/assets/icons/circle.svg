@@ -1,0 +1,4 @@
+<svg width="120" height="120">
+	<circle id="circle" class="date__circle__progress opacity-[.3] hover:opacity-[1]" stroke="white" stroke-width="0.2" fill="transparent" r="53" cx="60" cy="62">
+	</circle>
+</svg>

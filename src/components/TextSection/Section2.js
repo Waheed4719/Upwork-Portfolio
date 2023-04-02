@@ -20,13 +20,13 @@ const Section2 = ({}) => {
     <div className="h-screen" ref={containerRef}>
       <motion.div className="fixed top-[50%] translate-y-[-50%] px-[20px]">
         <motion.h1
-          className="opacity-0 text-white text-5xl transition-opacity duration-150 mb-4"
+          className="opacity-0 text-white text-4xl md:text-[4.4rem] transition-opacity duration-150 mb-4"
           style={{ opacity, rotateX: rotationX }}
         >
           Curriculam Vitae
         </motion.h1>
         <motion.div className="opacity-0" style={{ opacity }}>
-          <span className="italic text-white">
+          <span className="italic text-white text-2xl">
             Latin for "course of life"...
           </span>
         </motion.div>

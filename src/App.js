@@ -8,6 +8,7 @@ import Drawer from "./components/Drawer";
 import TextSections from "./components/TextSection";
 import ContactForm from "./components/ContactForm";
 import MyProjects from "./components/MyProjects";
+import MyProjects2 from "./components/MyProjects2";
 
 export default function App() {
   const ref = useRef(null);
@@ -28,6 +29,9 @@ export default function App() {
         >
           <WorkSection />
         </div>
+        {/* <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative mb-4 pb-[2rem]">
+          <MyProjects2 />
+        </div> */}
         <div className="xl:w-[calc(100vw-200px)] ml-[20px] md:ml-[100px] mr-auto snap-mandatory snap-y scroll-smooth overflow-y  relative mb-4 pb-[2rem]">
           <MyProjects />
         </div>

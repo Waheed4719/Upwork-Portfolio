@@ -18,6 +18,7 @@ const Card = ({
   technologies,
   liveSite,
   github,
+  index,
 }) => (
   <motion.div
     variants={item}
@@ -40,7 +41,11 @@ const Card = ({
         <ReactSVG src={LinkIcon} className="h-8 w-8 customSvg text-white" />
       </a>
     </div>
-    <img src={image} alt={`${title}`} />
+    <img
+      src={image}
+      className={`${index === 4 && "object-contain h-[176px]"}`}
+      alt={`${title}`}
+    />
     <div className="p-4 flex-1 flex flex-col">
       <h4 className="mb-4 text-white text-[1.2rem] font-semibold">{title}</h4>
       <p className="mb-4 text-white text-[1.1rem] flex-1">{description}</p>
