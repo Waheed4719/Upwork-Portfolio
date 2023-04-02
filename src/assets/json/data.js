@@ -14,6 +14,8 @@ export const works = [
       "How work should work",
     ],
     position: "Software Engineer Fellow",
+    startYear: "12/2022",
+    endYear: "Present",
     icons: [
       "nodejs",
       "github",
@@ -70,6 +72,8 @@ export const works = [
       "react",
       "redux",
     ],
+    startYear: "03/2022",
+    endYear: "08/2022",
     responsibilities: [
       {
         id: 1,
@@ -105,6 +109,7 @@ export const works = [
       "Find talent your way",
       "How work should work",
     ],
+
     position: "Software Engineer",
     icons: [
       "nodejs",
@@ -116,6 +121,8 @@ export const works = [
       "react",
       "redux",
     ],
+    startYear: "03/2023",
+    endYear: "Present",
     responsibilities: [
       {
         id: 1,
@@ -149,6 +156,8 @@ export const works = [
     position: "Patient Care Representative",
     descriptions: ["A healthcare company"],
     icons: [],
+    startYear: "11/2022",
+    endYear: "Present",
     responsibilities: [
       {
         id: 1,
@@ -175,6 +184,8 @@ export const works = [
     position: "Medical administrative Assistant",
     descriptions: ["A healthcare company"],
     icons: [],
+    startYear: "10/2021",
+    endYear: "03/2022",
     responsibilities: [
       {
         id: 1,

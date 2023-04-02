@@ -14,6 +14,8 @@ const WorkSection = () => (
         descriptions={work.descriptions ?? []}
         icons={work.icons}
         position={work.position}
+        startYear={work.startYear}
+        endYear={work.endYear}
         responsibilities={work.responsibilities}
       />
     ))}
